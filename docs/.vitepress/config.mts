@@ -5,7 +5,11 @@ export default defineConfig({
   base: '/NYblog/',
   title: "NuanYang",
   description: "NuanYang",
+  head: [
+    ['link', { rel: 'icon', href: '/NYblog/avatar.png' }],
+  ],
   themeConfig: {
+    logo:'/avatar.png',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },

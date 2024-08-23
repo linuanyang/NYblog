@@ -3,14 +3,13 @@ import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
+import MyLayout from '../components/MyLayout.vue'
+
+
 
 export default {
   extends: DefaultTheme,
-  Layout: () => {
-    return h(DefaultTheme.Layout, null, {
-      // https://vitepress.dev/guide/extending-default-theme#layout-slots
-    })
-  },
+  Layout: MyLayout,
   enhanceApp({ app, router, siteData }) {
     // ...
   }
