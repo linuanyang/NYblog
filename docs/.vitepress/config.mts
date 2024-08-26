@@ -18,13 +18,13 @@ export default defineConfig({
         pageTotal: await getMdTotal(),
         // https://vitepress.dev/reference/default-theme-config
         nav: [
-            {text: '首页', link: '/'},
+            {text: '🏠 Home', link: '/'},
             {text: '📝 Docs', link: '/pages/directory'},
             {text: '🏷️ Tags', link: '/pages/tags'},
             {
-                text: '👀 Follow me',
+                text: '😜 Follow me',
                 items: [
-                    { text: 'Github', link: 'https://github.com/linuanyang' },
+                    {text: 'Github', link: 'https://github.com/linuanyang'},
                 ],
             },
         ],
