@@ -11,7 +11,7 @@ interface FrontMatter {
     categories: string[]
 }
 
-interface PostInfo {
+interface MdInfo {
     frontMatter: FrontMatter
     regularPath: string
 }
