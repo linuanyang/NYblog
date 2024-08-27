@@ -41,13 +41,13 @@ export default defineConfigWithTheme<ThemeConfig>({
             {icon: 'github', link: 'https://github.com/vuejs/vitepress'},
         ],
         search: {
-            // provider: 'local'
-            provider:'algolia',
-            options:{
-                appId: 'BYK9XCINGE',
-                apiKey: '262900d307696b37b513b0b8a306a5d0',
-                indexName: 'nuanyang',
-            },
+            provider: 'local'
+            // provider:'algolia',
+            // options:{
+            //     appId: 'BYK9XCINGE',
+            //     apiKey: '262900d307696b37b513b0b8a306a5d0',
+            //     indexName: 'nuanyang',
+            // },
         },
     },
     vite: {
