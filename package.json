@@ -22,6 +22,7 @@
     "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
+    "algoliasearch": "v4",
     "dayjs": "^1.11.13",
     "element-plus": "^2.8.1",
     "vue": "^3.4.38"

@@ -1,18 +1,27 @@
-import {defineConfig} from 'vitepress'
+import {defineConfig, defineConfigWithTheme} from 'vitepress'
 import {getMarkdowns, getMdTotal} from "./theme/server";
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+import {type DefaultTheme} from "vitepress/types/default-theme";
+
+type ThemeConfig = DefaultTheme.Config & {
+    avator: string;
+    markdowns: any[];
+    pageSize: number;
+    pageTotal: number;
+}
+
+export default defineConfigWithTheme<ThemeConfig>({
     base: '/NYblog/',
     title: "NuanYang - Blog",
     description: "NuanYang - Blog",
+    appearance: 'dark',
     head: [
         ['link', {rel: 'icon', href: '/NYblog/avatar.png'}],
     ],
     themeConfig: {
         logo: '/avatar.png',
-        // @ts-ignore
-        avator: '/avatar.png',
         aside: false,
+        avator: '/avatar.png',
         markdowns: await getMarkdowns(),
         pageSize: 5,
         pageTotal: await getMdTotal(),
@@ -32,7 +41,13 @@ export default defineConfig({
             {icon: 'github', link: 'https://github.com/vuejs/vitepress'},
         ],
         search: {
-            provider: 'local'
+            // provider: 'local'
+            provider:'algolia',
+            options:{
+                appId: 'BYK9XCINGE',
+                apiKey: '262900d307696b37b513b0b8a306a5d0',
+                indexName: 'nuanyang',
+            },
         },
     },
     vite: {
@@ -43,5 +58,8 @@ export default defineConfig({
             hmr: true,
         },
         clearScreen: true,
+    },
+    sitemap:{
+        hostname: 'https://linuanyang.github.io/NYblog/',
     }
 })
