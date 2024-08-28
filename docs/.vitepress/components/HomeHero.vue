@@ -28,6 +28,7 @@ const avator: string = theme.value.avator
 }
 
 .avator {
+  height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;

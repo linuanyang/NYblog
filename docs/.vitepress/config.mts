@@ -18,6 +18,10 @@ export default defineConfigWithTheme<ThemeConfig>({
     head: [
         ['link', {rel: 'icon', href: '/NYblog/avatar.png'}],
     ],
+    markdown: {
+        lineNumbers: true,
+        theme: 'one-dark-pro'
+    },
     themeConfig: {
         logo: '/avatar.png',
         aside: false,
@@ -41,14 +45,15 @@ export default defineConfigWithTheme<ThemeConfig>({
             {icon: 'github', link: 'https://github.com/vuejs/vitepress'},
         ],
         search: {
-            provider: 'local'
-            // provider:'algolia',
-            // options:{
-            //     appId: 'BYK9XCINGE',
-            //     apiKey: '262900d307696b37b513b0b8a306a5d0',
-            //     indexName: 'nuanyang',
-            // },
+            // provider: 'local'
+            provider: 'algolia',
+            options: {
+                appId: 'PZWI6OOD1R',
+                apiKey: 'e205b43af3236b78cf7c2fa089f198d5',
+                indexName: 'linuanyangio',
+            },
         },
+
     },
     vite: {
         server: {
@@ -59,7 +64,7 @@ export default defineConfigWithTheme<ThemeConfig>({
         },
         clearScreen: true,
     },
-    sitemap:{
+    sitemap: {
         hostname: 'https://linuanyang.github.io/NYblog/',
     }
 })

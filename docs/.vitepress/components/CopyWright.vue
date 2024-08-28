@@ -5,7 +5,7 @@
       <a href="https://github.com/linuanyang" target="_blank" title="作者">Nyang</a>
     </div>
     |
-    <div>Copyright © 2023-present</div>
+    <div>Copyright © 2022-present</div>
     |
     <div>Released under the MIT License</div>
   </footer>
